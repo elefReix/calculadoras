@@ -10,7 +10,8 @@ export const styles = StyleSheet.create({
     },
     resultado:{
         fontSize:60,
-        color:'white'
+        color:'white',
+        marginBottom:10
     },
     resultadoLittle:{
         fontSize:30,
