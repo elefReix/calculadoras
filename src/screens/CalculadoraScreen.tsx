@@ -1,12 +1,15 @@
 import { View, Text } from 'react-native';
 import { styles } from '../theme/appTheme';
 import { Boton } from '../componentes/Boton';
+import { useState } from 'react';
 
 export const CalculadoraScreen = () => {
+const [numero, setnumero] = useState(100)
+
     return(
         <View style={styles.calculadoraContainer}>
             <Text style={styles.resultadoLittle}>1,500.00</Text>
-            <Text style={styles.resultado}>1,500.00</Text>
+            <Text style={styles.resultado}>{numero}</Text>
             {/* RENGLON 1 */}
             <View style={styles.fila}>
                 <Boton color='#9B9B9B' texto='C' />
