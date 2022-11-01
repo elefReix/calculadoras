@@ -16,7 +16,17 @@ const limpiarNumeroAnterior = () =>{
 }
 
 const armarNumero = (numeroTexto:string) =>{
+    if(numero.includes('.') && numeroTexto==='.')  return 
+
+    if(numero.startsWith('0') || numero.startsWith('-0') ) return
     setnumero(numero+numeroTexto)
+}
+
+const positivoNegativo = () =>{
+    // si no es negativo quiere decir que es positivo y no se pone ese signo 
+    numero.includes('-')?
+    setnumero(numero.replace('-','')):
+    setnumero('-'+numero)
 }
 
     return(
@@ -26,7 +36,7 @@ const armarNumero = (numeroTexto:string) =>{
             {/* RENGLON 1 */}
             <View style={styles.fila}>
                 <Boton color='#9B9B9B' texto='C' accion={limpiar}/>
-                <Boton color='#9B9B9B' texto='+/-' accion={limpiar} />
+                <Boton color='#9B9B9B' texto='+/-' accion={positivoNegativo} />
                 <Boton color='#9B9B9B' texto='%' accion={limpiar} />
                 <Boton color='#FF9427' texto='/' accion={limpiar} />
             </View>
